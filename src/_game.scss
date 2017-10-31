@@ -1,0 +1,92 @@
+.game, .game div {height: 100%;}
+.game div {
+  .status {
+    float: left;
+    height: 100%;
+    width: 300px;
+    margin: 0;
+    border: 0 solid #dfdfdf;
+    box-sizing: border-box;
+    border-right-width: 2px;
+    .float-left { float: left; }
+    .float-right { float: right; }
+    p {
+      font-family: 'Comfortaa', cursive;
+      font-size: 15px;
+      margin: 1vh 0 0 0.5vh;
+    }
+    input {
+      -webkit-appearance: none;  /* Override default CSS styles */
+      appearance: none;
+      width: 90%;
+      margin: 10px 5%;
+      outline: none;
+    }
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 10px; /* Set a specific slider handle width */
+      height: 10px; /* Slider handle height */
+      cursor: pointer; /* Cursor on hover */
+    }
+    .slider::-moz-range-thumb {
+      appearance: none;
+      width: 15px; /* Set a specific slider handle width */
+      height: 15px; /* Slider handle height */
+      cursor: pointer; /* Cursor on hover */
+    }
+  }
+  .board {
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    overflow: scroll;
+    margin: 0;
+    #board-grid {
+      height: fit-content;
+      width: fit-content;
+      padding: 20px;
+      .board-row {
+        width: max-content;
+        height: max-content;
+      }
+      .board-row:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
+      .square {
+        background: #fff;
+        border: 2px solid #999;
+        float: left;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 34px;
+        height: 34px;
+        width: 34px;
+        margin: 0;
+        margin-right: -2px;
+        margin-top: -2px;
+        padding: 0;
+        text-align: center;
+      }
+      .square-lu { border-radius: 10px 0 0 0; }
+      .square-ru { border-radius: 0 10px 0 0; }
+      .square-rl { border-radius: 0 0 10px 0; }
+      .square-ll { border-radius: 0 0 0 10px; }
+      .squarelast {
+        color: blue;
+      }
+
+      .square:focus {
+        outline: none;
+      }
+      .kbd-navigation .square:focus {
+        background: #ddd;
+      }
+    }
+  }
+}

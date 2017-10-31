@@ -1,0 +1,25 @@
+{
+  "name": "jatkis",
+  "version": "1.0.0",
+  "private": true,
+  "homepage" : "http://localhost/jatkis",
+  "dependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "randomstring": "^1.1.5",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.0.14",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

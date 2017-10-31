@@ -1,0 +1,16 @@
+@media only screen and (max-width: 768px){
+  .game, .game div {width: 100%; height: 100%;}
+  .game div {
+    .status {
+      position: static;
+      background-color: white;
+      float: none;
+      height: 100px;
+      width: 100%;
+    }
+    .board {
+      height: fill-available;
+      width: 100%;
+    }
+  }
+}

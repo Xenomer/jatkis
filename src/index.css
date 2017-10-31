@@ -1,0 +1,216 @@
+.game, .game div {
+  height: 100%; }
+
+.game div .status {
+  float: left;
+  height: 100%;
+  width: 300px;
+  margin: 0;
+  border: 0 solid #dfdfdf;
+  box-sizing: border-box;
+  border-right-width: 2px; }
+  .game div .status .float-left {
+    float: left; }
+  .game div .status .float-right {
+    float: right; }
+  .game div .status p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 15px;
+    margin: 1vh 0 0 0.5vh; }
+  .game div .status input {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 90%;
+    margin: 10px 5%;
+    outline: none; }
+  .game div .status .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 10px;
+    /* Set a specific slider handle width */
+    height: 10px;
+    /* Slider handle height */
+    cursor: pointer;
+    /* Cursor on hover */ }
+  .game div .status .slider::-moz-range-thumb {
+    appearance: none;
+    width: 15px;
+    /* Set a specific slider handle width */
+    height: 15px;
+    /* Slider handle height */
+    cursor: pointer;
+    /* Cursor on hover */ }
+
+.game div .board {
+  box-sizing: border-box;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  overflow: scroll;
+  margin: 0; }
+  .game div .board #board-grid {
+    height: fit-content;
+    width: fit-content;
+    padding: 20px; }
+    .game div .board #board-grid .board-row {
+      width: max-content;
+      height: max-content; }
+    .game div .board #board-grid .board-row:after {
+      clear: both;
+      content: "";
+      display: table; }
+    .game div .board #board-grid .square {
+      background: #fff;
+      border: 2px solid #999;
+      float: left;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 34px;
+      height: 34px;
+      width: 34px;
+      margin: 0;
+      margin-right: -2px;
+      margin-top: -2px;
+      padding: 0;
+      text-align: center; }
+    .game div .board #board-grid .square-lu {
+      border-radius: 10px 0 0 0; }
+    .game div .board #board-grid .square-ru {
+      border-radius: 0 10px 0 0; }
+    .game div .board #board-grid .square-rl {
+      border-radius: 0 0 10px 0; }
+    .game div .board #board-grid .square-ll {
+      border-radius: 0 0 0 10px; }
+    .game div .board #board-grid .squarelast {
+      color: blue; }
+    .game div .board #board-grid .square:focus {
+      outline: none; }
+    .game div .board #board-grid .kbd-navigation .square:focus {
+      background: #ddd; }
+
+html {
+  height: 100%; }
+
+#root, body {
+  height: 100%;
+  margin: 0; }
+
+#index, #createdpage {
+  font-family: 'Comfortaa', cursive;
+  font-size: 2.4em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; }
+  #index h1, #createdpage h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 1.7em;
+    margin: 0 0 5vh 0;
+    text-align: center; }
+  #index .hide-mobile, #createdpage .hide-mobile {
+    display: inline; }
+  #index .box, #createdpage .box {
+    width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: column; }
+  #index .box-item, #index .box-item-left, #index .box-item-right, #createdpage .box-item, #createdpage .box-item-left, #createdpage .box-item-right {
+    padding: 20px;
+    border: 3px solid #dfdfdf; }
+  #index .box-item-left, #createdpage .box-item-left {
+    border-radius: 20px 0 0 20px;
+    border-width: 2px; }
+  #index .box-item-right, #createdpage .box-item-right {
+    border-radius: 0 20px 20px 0;
+    border-width: 2px 2px 2px 0; }
+  #index form .round, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .round, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+    border-radius: 40px;
+    border: solid 2px #dcdcdc;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px; }
+  #index form .glow, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .glow, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+    transition: box-shadow 0.3s, border 0.3s; }
+  #index form .glow:focus, #index form input[type="text"]:focus, #index form input[type="number"]:focus, #index form button:focus, #index #createdpage form button:focus, #createdpage #index form button:focus,
+  #index form .glow:hover, #index form input[type="text"]:hover, #index form input[type="number"]:hover, #index form button:hover,
+  #index #createdpage form button:hover, #createdpage
+  #index form button:hover, #createdpage form .glow:focus, #createdpage form input[type="text"]:focus, #createdpage form input[type="number"]:focus, #createdpage #index form button:focus, #index #createdpage form button:focus, #createdpage form button:focus,
+  #createdpage form .glow:hover, #createdpage form input[type="text"]:hover, #createdpage form input[type="number"]:hover,
+  #createdpage #index form button:hover, #index
+  #createdpage form button:hover, #createdpage form button:hover {
+    border: solid 2px #707070;
+    box-shadow: 0 0 5px 1px #969696; }
+  #index form .bigtext, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .bigtext, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.7em;
+    text-align: center; }
+  #index form input[type="text"], #createdpage form input[type="text"] {
+    width: 160px; }
+  #index form input[type="number"], #createdpage form input[type="number"] {
+    width: 120px; }
+  #index form button, #createdpage form button {
+    margin: 10px 0 0 0;
+    width: 240px;
+    padding: 10px;
+    margin-top: 15px; }
+
+@media only screen and (max-width: 768px) {
+  #index, #createdpage {
+    font-size: 2.8em;
+    display: block; }
+    #index h1, #createdpage h1 {
+      font-family: 'Audiowide', cursive;
+      font-size: 2em;
+      margin: 0 0 10px 0;
+      text-align: center; }
+    #index .hide-mobile, #createdpage .hide-mobile {
+      display: none; }
+    #index .box, #createdpage .box {
+      margin: 0;
+      width: 100%;
+      display: block;
+      grid-auto-flow: dense; }
+    #index .box-item, #index .box-item-left, #index .box-item-right, #createdpage .box-item, #createdpage .box-item-left, #createdpage .box-item-right {
+      width: 100%;
+      padding: 20px 0;
+      border: 3px solid #dfdfdf;
+      border-radius: 0; }
+    #index .box-item-left, #createdpage .box-item-left {
+      border-width: 0; }
+    #index .box-item-right, #createdpage .box-item-right {
+      border-width: 2px 0 0 0; }
+    #index form .bigtext, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .bigtext, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+      font-family: 'Comfortaa', cursive;
+      font-size: 0.9em;
+      text-align: center;
+      margin: 10px 0; }
+    #index form input[type="text"], #createdpage form input[type="text"] {
+      width: 80%;
+      font-size: 0.9em; }
+    #index form input[type="number"], #createdpage form input[type="number"] {
+      width: 130px;
+      font-size: 0.75em; }
+    #index form button, #createdpage form button {
+      margin: 10px 0 0 0;
+      width: 80%;
+      padding: 10px;
+      margin-top: 15px; } }
+
+@media only screen and (max-width: 768px) {
+  .game, .game div {
+    width: 100%;
+    height: 100%; }
+  .game div .status {
+    position: static;
+    background-color: white;
+    float: none;
+    height: 100px;
+    width: 100%; }
+  .game div .board {
+    height: fill-available;
+    width: 100%; } }

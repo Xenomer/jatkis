@@ -1,0 +1,68 @@
+html {
+  height: 100%; }
+
+#root, body {
+  height: 100%; }
+
+#index, #createdpage {
+  font-family: 'Comfortaa', cursive;
+  font-size: 2.4em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; }
+  #index h1, #createdpage h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 1.7em;
+    margin: 0 0 5vh 0;
+    text-align: center; }
+  #index .box, #createdpage .box {
+    width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: column; }
+  #index .box-item, #index .box-item-left, #index .box-item-right, #createdpage .box-item, #createdpage .box-item-left, #createdpage .box-item-right {
+    padding: 20px;
+    border: 3px solid #dfdfdf; }
+  #index .box-item-left, #createdpage .box-item-left {
+    border-radius: 20px 0 0 20px;
+    border-width: 1px; }
+  #index .box-item-right, #createdpage .box-item-right {
+    border-radius: 0 20px 20px 0;
+    border-width: 1px 1px 1px 0; }
+  #index form .round, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .round, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+    border-radius: 40px;
+    border: solid 2px #dcdcdc;
+    height: auto;
+    padding: 10px;
+    margin-top: 10px; }
+  #index form .glow, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .glow, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+    transition: box-shadow 0.3s, border 0.3s; }
+  #index form .glow:focus, #index form input[type="text"]:focus, #index form input[type="number"]:focus, #index form button:focus, #index #createdpage form button:focus, #createdpage #index form button:focus,
+  #index form .glow:hover, #index form input[type="text"]:hover, #index form input[type="number"]:hover, #index form button:hover,
+  #index #createdpage form button:hover, #createdpage
+  #index form button:hover, #createdpage form .glow:focus, #createdpage form input[type="text"]:focus, #createdpage form input[type="number"]:focus, #createdpage #index form button:focus, #index #createdpage form button:focus, #createdpage form button:focus,
+  #createdpage form .glow:hover, #createdpage form input[type="text"]:hover, #createdpage form input[type="number"]:hover,
+  #createdpage #index form button:hover, #index
+  #createdpage form button:hover, #createdpage form button:hover {
+    border: solid 2px #707070;
+    box-shadow: 0 0 5px 1px #969696; }
+  #index form input[type="text"], #createdpage form input[type="text"] {
+    width: 140px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.7em;
+    text-align: center; }
+  #index form input[type="number"], #createdpage form input[type="number"] {
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.7em;
+    text-align: center;
+    width: 120px; }
+  #index form button, #createdpage form button {
+    margin: 10px 0 0 0;
+    width: 240px;
+    padding: 10px;
+    margin-top: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.7em;
+    text-align: center; }

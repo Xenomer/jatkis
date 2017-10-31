@@ -1,0 +1,87 @@
+@import "game";
+html{
+  height: 100%;
+}
+#root, body {height: 100%; margin: 0;}
+#index, #createdpage {
+  //text
+  font-family: 'Comfortaa', cursive;
+  font-size: 2.4em;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  h1{
+    font-family: 'Audiowide', cursive;
+    font-size: 1.7em;
+    margin: 0 0 5vh 0;
+    text-align: center;
+  }
+  .hide-mobile {
+    display: inline;
+  }
+
+  //boxes
+  .box {
+    width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-flow: column;
+  }
+  .box-item {
+    padding: 20px;
+    border: 3px solid #dfdfdf;
+  }
+  .box-item-left {
+    @extend .box-item;
+    border-radius: 20px 0 0 20px;
+    border-width: 2px;
+  }
+  .box-item-right {
+    @extend .box-item;
+    border-radius: 0 20px 20px 0;
+    border-width: 2px 2px 2px 0;
+  }
+
+  //form items
+  form {
+    .round {
+      border-radius: 40px;
+      border: solid 2px #dcdcdc;
+      height: auto;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    .glow { transition: box-shadow 0.3s, border 0.3s; }
+    .glow:focus,
+    .glow:hover {
+      border: solid 2px #707070;
+      box-shadow: 0 0 5px 1px #969696;
+    }
+    .bigtext {
+      font-family: 'Comfortaa', cursive;
+      font-size: 0.7em;
+      text-align: center;
+    }
+    input[type="text"] {
+      @extend .glow, .round, .bigtext;
+      width: 160px;
+    }
+    input[type="number"] {
+      @extend .round, .glow, .bigtext;
+      width: 120px;
+    }
+    button {
+      @extend .glow, .round, .bigtext;
+      margin: 10px 0 0 0;
+      width: 240px;
+      padding: 10px;
+      margin-top: 15px;
+    }
+  }
+}
+@import "index-mobile";
+@import "game-mobile";
