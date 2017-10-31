@@ -6,8 +6,10 @@ import openSocket from 'socket.io-client';
 import './index.css';
 import Game from './game';
 
+var config = require('./config.json');
+
 // create and connect the socket we use for communicating
-const socket = openSocket('http://hst1.xenomer.me:8008/');
+const socket = openSocket(config.API);
 
 
 // this is the whole index page of the app
