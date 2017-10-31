@@ -2,7 +2,7 @@
   "name": "jatkis",
   "version": "1.0.0",
   "private": true,
-  "homepage" : "http://localhost/jatkis",
+  "homepage": "http://localhost/jatkis",
   "dependencies": {
     "node-sass-chokidar": "0.0.3",
     "randomstring": "^1.1.5",
