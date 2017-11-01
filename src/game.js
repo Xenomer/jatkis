@@ -169,19 +169,19 @@ class Board extends React.Component {
     var next;
     if(this.state.won){
       if(this.props.me === this.state.won) {
-        next = `You (${this.props.me}) won!`;
+        next = `${this.props.myname} (${this.props.me}) won!`;
       }
       else{
-        next = `Opponent (${this.state.won}) won!`;
+        next = `${this.props.oname} (${this.state.won}) won!`;
       }
     }
     else{
       if((this.props.me === 'X' && this.state.xIsNext) ||
         (this.props.me !== 'X' && !this.state.xIsNext)) {
-        next = `Your (${this.props.me}) turn`;
+        next = `${this.props.myname}'s (${this.props.me}) turn`;
       }
       else{
-        next = `Opponents (${this.props.me === 'X' ? 'O' : 'X'}) turn`;
+        next = `${this.props.oname}'s (${this.props.me === 'X' ? 'O' : 'X'}) turn`;
       }
     }
     return (
@@ -189,6 +189,7 @@ class Board extends React.Component {
         <div className="status">
           <p id="sizelabel">Size: 100%</p>
           <input type="range" id="size" className="slider" onChange={this.setSize} min="50" /><br />
+          <p>Name: {this.props.myname}</p>
           <p>{next}</p>
         </div>
         <div className="board">
@@ -214,7 +215,12 @@ export default class Game extends React.Component {
   render() {
     return (
       <div className="game">
-        <Board width={this.props.width} height={this.props.height} me={this.props.me} />
+        <Board
+          width={this.props.width}
+          height={this.props.height}
+          me={this.props.me}
+          myname={this.props.myname}
+          oname={this.props.oname} />
       </div>
     );
   }
