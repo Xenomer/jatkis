@@ -17,14 +17,15 @@ io.on('connection', (client) => {
     db[id] = props;
     c(id);
   });
-  client.on('join', (id, c) => {
+  client.on('join', (arg, c) => {
+    var id = arg.id;
     var props = db[id];
     if(!props) {
       c(false);
     }
     else{
       gameId = id;
-      io.to(id).emit('join');
+      io.to(id).emit('join', arg);
       client.join(id);
       delete db[id];
       c(props);
@@ -43,5 +44,6 @@ io.on('connection', (client) => {
   });
 });
 
-io.listen(process.env.PORT || 8008);
+var port = process.env.PORT || 8008;
+io.listen(port);
 console.log('listening on port ', port);

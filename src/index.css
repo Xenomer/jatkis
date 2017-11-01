@@ -128,32 +128,36 @@ html {
   #index .box-item-right, #createdpage .box-item-right {
     border-radius: 0 20px 20px 0;
     border-width: 2px 2px 2px 0; }
-  #index form .round, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .round, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+  #index .nameinput, #createdpage .nameinput {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 250px !important; }
+  #index .round, #index input[type="text"], #index input[type="number"], #index button, #index #createdpage button, #createdpage #index button, #createdpage .round, #createdpage input[type="text"], #createdpage input[type="number"], #createdpage #index button, #index #createdpage button, #createdpage button {
     border-radius: 40px;
     border: solid 2px #dcdcdc;
     height: auto;
     padding: 10px;
     margin-top: 10px; }
-  #index form .glow, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .glow, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+  #index .glow, #index input[type="text"], #index input[type="number"], #index button, #index #createdpage button, #createdpage #index button, #createdpage .glow, #createdpage input[type="text"], #createdpage input[type="number"], #createdpage #index button, #index #createdpage button, #createdpage button {
     transition: box-shadow 0.3s, border 0.3s; }
-  #index form .glow:focus, #index form input[type="text"]:focus, #index form input[type="number"]:focus, #index form button:focus, #index #createdpage form button:focus, #createdpage #index form button:focus,
-  #index form .glow:hover, #index form input[type="text"]:hover, #index form input[type="number"]:hover, #index form button:hover,
-  #index #createdpage form button:hover, #createdpage
-  #index form button:hover, #createdpage form .glow:focus, #createdpage form input[type="text"]:focus, #createdpage form input[type="number"]:focus, #createdpage #index form button:focus, #index #createdpage form button:focus, #createdpage form button:focus,
-  #createdpage form .glow:hover, #createdpage form input[type="text"]:hover, #createdpage form input[type="number"]:hover,
-  #createdpage #index form button:hover, #index
-  #createdpage form button:hover, #createdpage form button:hover {
+  #index .glow:focus, #index input[type="text"]:focus, #index input[type="number"]:focus, #index button:focus, #index #createdpage button:focus, #createdpage #index button:focus,
+  #index .glow:hover, #index input[type="text"]:hover, #index input[type="number"]:hover, #index button:hover,
+  #index #createdpage button:hover, #createdpage
+  #index button:hover, #createdpage .glow:focus, #createdpage input[type="text"]:focus, #createdpage input[type="number"]:focus, #createdpage #index button:focus, #index #createdpage button:focus, #createdpage button:focus,
+  #createdpage .glow:hover, #createdpage input[type="text"]:hover, #createdpage input[type="number"]:hover,
+  #createdpage #index button:hover, #index
+  #createdpage button:hover, #createdpage button:hover {
     border: solid 2px #707070;
     box-shadow: 0 0 5px 1px #969696; }
-  #index form .bigtext, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .bigtext, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+  #index .bigtext, #index input[type="text"], #index input[type="number"], #index button, #index #createdpage button, #createdpage #index button, #createdpage .bigtext, #createdpage input[type="text"], #createdpage input[type="number"], #createdpage #index button, #index #createdpage button, #createdpage button {
     font-family: 'Comfortaa', cursive;
     font-size: 0.7em;
     text-align: center; }
-  #index form input[type="text"], #createdpage form input[type="text"] {
+  #index input[type="text"], #createdpage input[type="text"] {
     width: 160px; }
-  #index form input[type="number"], #createdpage form input[type="number"] {
+  #index input[type="number"], #createdpage input[type="number"] {
     width: 120px; }
-  #index form button, #createdpage form button {
+  #index button, #createdpage button {
     margin: 10px 0 0 0;
     width: 240px;
     padding: 10px;
@@ -184,7 +188,7 @@ html {
       border-width: 0; }
     #index .box-item-right, #createdpage .box-item-right {
       border-width: 2px 0 0 0; }
-    #index form .bigtext, #index form input[type="text"], #index form input[type="number"], #index form button, #index #createdpage form button, #createdpage #index form button, #createdpage form .bigtext, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage #index form button, #index #createdpage form button, #createdpage form button {
+    #index form .bigtext, #index form input[type="text"], #index form input[type="number"], #index form button, #index form #createdpage button, #createdpage #index form button, #createdpage form .bigtext, #createdpage form input[type="text"], #createdpage form input[type="number"], #createdpage form #index button, #index #createdpage form button, #createdpage form button {
       font-family: 'Comfortaa', cursive;
       font-size: 0.9em;
       text-align: center;

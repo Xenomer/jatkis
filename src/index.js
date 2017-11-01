@@ -19,6 +19,7 @@ class LoginForm extends React.Component {
 
     // set default values
     this.state = {
+      name: '',
       id: '',
       x: 15,
       y: 15
@@ -35,11 +36,21 @@ class LoginForm extends React.Component {
       alert('Invalid id!');
       return;
     }
-    socket.emit('join', this.state.id, (props) => {
+    else if(!this.testName()) {
+      alert("Invalid name!");
+      return;
+    }
+    socket.emit('join', {id: this.state.id, name: this.state.name}, (props) => {
       // continue if server responds that the id is available
       if(props){
         ReactDOM.render(
-          <Game width={props.width} height={props.height} socket={socket} me='O'/>,
+          <Game
+            width={props.width}
+            height={props.height}
+            socket={socket}
+            me='O'
+            myname={this.state.name}
+            oname={props.name}/>,
           document.getElementById('root')
         );
       }
@@ -56,8 +67,12 @@ class LoginForm extends React.Component {
     else if(this.state.y < 5 || this.state.y > 100){
       alert('Invalid height!');
     }
+    else if(!this.testName()) {
+      alert("Invalid name!");
+      return;
+    }
     else{
-      var props = {width: this.state.x, height: this.state.y};
+      var props = {width: this.state.x, height: this.state.y, name: this.state.name};
       socket.emit('create', props, (id) => {
         ReactDOM.render(
           <CreatedPage id={id} p={props} />,
@@ -66,11 +81,19 @@ class LoginForm extends React.Component {
       });
     }
   }
+  testName(){
+    if(!this.state.name ||
+      this.state.name.length < 2) {
+      return false;
+    }
+    else return true;
+  }
   render() {
     return (
       <div id="index">
         {/* the 'hide-mobile' hides elements when on mobile layout (to save space) */}
         <h1>Jätkis<div className="hide-mobile"> - Jätkänshakki</div></h1>
+        <input className="nameinput" type="text" placeholder="name" onChange={(e) => this.state.name = e.target.value} /> <br />
         <div class="box">
           {/* 'join game' box */}
           <form className="box-item-left" onSubmit={this.join}>
@@ -107,12 +130,19 @@ class CreatedPage extends React.Component {
   constructor(props) {
     super();
     this.state = {
+      name: props.p.name,
       id: props.id
     };
-    socket.on('join', () => {
+    socket.on('join', (info) => {
       // render the game when another user joins
       ReactDOM.render(
-        <Game width={this.props.p.width} height={this.props.p.height} socket={socket} me="X"/>,
+        <Game
+          width={this.props.p.width}
+          height={this.props.p.height}
+          socket={socket}
+          me="X"
+          myname={props.p.name}
+          oname={info.name} />,
         document.getElementById('root')
       );
     });
@@ -121,6 +151,7 @@ class CreatedPage extends React.Component {
     return (
       <div id="createdpage">
         <p>Game created. Your id:</p><br />
+        <p>Name: {this.props.p.name}</p>
         <h2>{this.state.id}</h2>
       </div>
     );
