@@ -4,6 +4,11 @@ var randomstring = require("randomstring");
 //database for storing pending games
 var db = {};
 
+module.exports = {
+  io: io,
+  games: 0,
+};
+
 io.on('connection', (client) => {
   var gameId = undefined;
   var started = false;
@@ -28,6 +33,7 @@ io.on('connection', (client) => {
       io.to(id).emit('join', arg);
       client.join(id);
       delete db[id];
+      module.exports.games++;
       c(props);
     }
   });
