@@ -94,7 +94,7 @@ class LoginForm extends React.Component {
         {/* the 'hide-mobile' hides elements when on mobile layout (to save space) */}
         <h1>Jätkis<div className="hide-mobile"> - Jätkänshakki</div></h1>
         <input className="nameinput" type="text" placeholder="name" onChange={(e) => this.state.name = e.target.value} /> <br />
-        <div class="box">
+        <div className="box">
           {/* 'join game' box */}
           <form className="box-item-left" onSubmit={this.join}>
             Join a game<br />
@@ -106,14 +106,14 @@ class LoginForm extends React.Component {
           <form className="box-item-right" onSubmit={this.create}>
             Create a game<br />
             <input type="number"
-              class="shortbox"
+              className="shortbox"
               placeholder="width"
               min="5" max="100"
               onChange={(e) => this.state.x = e.target.value}
               />
             x
             <input type="number"
-              class="shortbox"
+              className="shortbox"
               placeholder="height"
               min="5" max="100"
               onChange={(e) => this.state.y = e.target.value} /> <br />
